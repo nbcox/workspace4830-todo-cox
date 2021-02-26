@@ -32,22 +32,21 @@ footer {
 
 <body>
 <header>
-<h1> Todo List - Insert Data </h1>
+<h1> Todo List - Remove Data </h1>
 </header>
 
 <nav>
 <a href="/webproject-todo-cox/todo.html">Home</a> <br>
 <a href="/webproject-todo-cox/todoSearch.html">Search Data</a> <br>
-<a href="/webproject-todo-cox/todoRemove.html">Remove Data</a> <br>
+<a href="/webproject-todo-cox/todoInsert.html">Insert Data</a> <br>
 </nav>
 
 <section>
-	<h1>Add A New Task And Due Date</h1>
+	<h1>Remove A Completed Or Unnecessary Task</h1>
 	
-	<form action="TodoListInsert" method="POST">
+	<form action="TodoListRemove" method="POST">
 	
-		Task Name: <input type="text" name="taskName"> <br />
-		Due Date: <input type="text" name="date"> <br />
+		Task Name: <input type="text" name="deleteTask"> <br />
 		
 		<input type="submit" value="Submit" />
 	</form>

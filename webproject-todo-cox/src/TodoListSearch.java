@@ -76,11 +76,11 @@ public class TodoListSearch extends HttpServlet {
             String date = rs.getString("date").trim();
 
             if ((keyword1.isEmpty() && keyword2.isEmpty()) || (taskName.contains(keyword1) || date.contains(keyword2))) {
-               out.println("ID: " + id + ", ");
                out.println("Task Name: " + taskName + ", ");
                out.println("Due Date: " + date + "<br>");
             }
          }
+         out.println("<a href=/webproject-todo-cox/todoSearch.html>Search Again</a> <br>");
          out.println("<a href=/webproject-todo-cox/todo.html>Home</a> <br>");
          out.println("</body></html>");
          rs.close();

@@ -1,4 +1,3 @@
-
 /**
  * @file TodoListInsert.java
  */
@@ -57,6 +56,7 @@ public class TodoListInsert extends HttpServlet {
 
             "</ul>\n");
 
+      out.println("<a href=/webproject-todo-cox/todoInsert.html>Add Another Task</a> <br>");
       out.println("<a href=/webproject-todo-cox/todo.html>Home</a> <br>");
       out.println("</body></html>");
    }

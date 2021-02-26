@@ -1,5 +1,3 @@
-
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -20,7 +18,7 @@ public class TodoListRemove extends HttpServlet {
    }
 
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      String taskName = request.getParameter("taskName");
+      String taskName = request.getParameter("deleteTask");
 
       Connection connection = null;
       String insertSql = " DELETE FROM todoList WHERE TASKNAME = ?";
@@ -39,7 +37,7 @@ public class TodoListRemove extends HttpServlet {
       // Set response content type
       response.setContentType("text/html");
       PrintWriter out = response.getWriter();
-      String title = "Insert Data into DB table";
+      String title = "Remove Data from DB table";
       String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";
       out.println(docType + //
             "<html>\n" + //
@@ -48,10 +46,11 @@ public class TodoListRemove extends HttpServlet {
             "<h2 align=\"center\">" + title + "</h2>\n" + //
             "<ul>\n" + //
 
-            "  <li><b>Task Name</b>: " + taskName + "successfully removed\n" + //
+            "  <li><b>Task Name</b>: " + taskName + " successfully removed\n" + //
 
             "</ul>\n");
 
+      out.println("<a href=/webproject-todo-cox/todoRemove.html>Remove Another Task</a> <br>");
       out.println("<a href=/webproject-todo-cox/todo.html>Home</a> <br>");
       out.println("</body></html>");
    }
