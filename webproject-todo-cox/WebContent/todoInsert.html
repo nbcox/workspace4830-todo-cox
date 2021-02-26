@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1> Todo List - Insert Data </h1>
+</header>
+
+<nav>
+<a href="/webproject-todo-cox/todo.html">Home</a> <br>
+<a href="/webproject-todo-cox/todoSearch.html">Search Data</a> <br>
+</nav>
+
+<section>
+	<h1>Add A New Task And Due Date</h1>
+	
+	<form action="TodoInsert" method="POST">
+	
+		Task Name: <input type="text" name="taskName"> <br />
+		Due Date: <input type="text" name="date"> <br />
+		
+		<input type="submit" value="Submit" />
+	</form>
+
+</section>
+
+<footer>
+Copyright 2021 Nick Cox
+</footer>
+</body>
+</html>
